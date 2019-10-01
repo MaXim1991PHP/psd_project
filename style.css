@@ -16,6 +16,9 @@ li {
 a {
    text-decoration: none; 
 }
+h1,h2,h3 {
+    text-transform: uppercase;
+}
 .gray-text {
     color: #ababab;
 }
@@ -89,3 +92,50 @@ text-transform: uppercase;
 #header-menu ul li:first-child a {
     padding-left: 0;
 }
+#banners {
+    display: flex; /* фиксируем контейнер*/
+    flex-wrap: wrap; /*что бы сьезжадл друг под друга при свужении*/
+}
+#banners>div {  /* >правило наследуется для первого уровня вложенности*/
+    width: 50%;
+}
+#banners>div img {
+    max-width:100%;
+} 
+#banners .ban-left .wrap { /*отступ от соседнего обьекта справа*/
+margin-right: 15px;
+border: 1px solid gray;
+}
+#banners .ban-right .wrap {
+margin-left: 15px;
+    }
+#banners .ban-right .img-block{
+    position: relative;
+}
+
+ #banners i {
+     color: #f2ac04;
+     font-size: 26px;
+ }
+ #banners .slide {
+     display: flex;
+     justify-content: space-around; /* выравнивание текста по горизонтали*/
+     align-items: center; /* выравнивание текста по вертикали*/
+     margin: 10px 0;
+ }
+ #banners .ban-right h3{
+     position: absolute;
+     bottom: 5%;
+     left: 5%;
+     font-size: 2vw;  /* относительно окна браузера*/
+     color: #fff;
+     font-weight: normal;
+     margin: 0;
+ }
+
+ #banners .ban-right p{
+     border-top: 1px solid black;
+     margin-top: 5px;
+     padding-top: 15px;
+ }
+
