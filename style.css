@@ -16,6 +16,10 @@ li {
 a {
    text-decoration: none; 
 }
+h1,h2,h3 {
+    text-transform: uppercase;
+    font-weight: lighter;
+}
 .gray-text {
     color: #ababab;
 }
@@ -89,3 +93,126 @@ text-transform: uppercase;
 #header-menu ul li:first-child a {
     padding-left: 0;
 }
+#banners {
+    display: flex; /* фиксируем контейнер*/
+    flex-wrap: wrap; /*что бы сьезжадл друг под друга при свужении*/
+}
+#banners>div {  /* >правило наследуется для первого уровня вложенности*/
+    width: 50%;
+}
+#banners>div img {
+    max-width:100%;
+} 
+#banners .ban-left .wrap { /*отступ от соседнего обьекта справа*/
+margin-right: 15px;
+border: 1px solid gray;
+}
+#banners .ban-right .wrap {
+margin-left: 15px;
+    }
+#banners .ban-right .img-block{
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+ #banners i {
+     color: #f2ac04;
+     font-size: 26px;
+ }
+ #banners .slide {
+     display: flex;
+     justify-content: space-around; /* выравнивание текста по горизонтали*/
+     align-items: center; /* выравнивание текста по вертикали*/
+     margin: 10px 0;
+ }
+ #banners .ban-right h3{
+     position: absolute;
+     bottom: 5%;
+     left: 5%;
+     font-size: 2vw;  /* относительно окна браузера*/
+     color: #fff;
+     font-weight: normal;
+     margin: 0;
+ }
+
+ #banners .ban-right p{
+     border-top: 1px solid black;
+     margin-top: 5px;
+     padding-top: 15px;
+ }
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0 0 0;
+    border-top: 1px solid grey;
+    padding: 30px 0 0 0 ;
+    
+}
+#content .item  {
+    width: 33.33%;
+}
+#content .item h2 {
+    margin: 0 0 30px 0;
+}
+#content .about, #content .contacts {
+    padding: 0 40px
+}
+#content .about {
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}
+.news {
+    padding-right: 10px
+}
+.news .block-news {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px dashed gray;
+    margin-bottom: 15px;
+    padding-bottom: 10px
+}
+.news .block-news h4{
+margin: 0 0 5px 0;
+
+}
+.news .date-news span {
+    color: #f2ac04;
+    font-weight: bold;
+    width: 100%;
+}
+.news .date-news {
+    border-right: 1px solid gray;
+    padding-right: 10px;
+    text-align: center;
+    margin-right: 10px
+}
+.about {
+    line-height: 24px;
+}
+.contacts > div {
+border-bottom: 1px dashed grey;
+padding: 10px 0;
+display: flex;
+justify-content:space-between;
+}
+.contacts > div:last-child {
+    border: none
+}
+.contacts i {
+    font-size: 26px;
+    width: 15%;
+    text-align: center;
+    color: lightgray;
+
+}
+.contacts span {
+    width: 70%;
+    color: gray;
+
+}
+.contacts >div:first-of-type span,.contacts >div:first-of-type + div span { 
+    font-weight: bold;
+} /*применяем стили к нужному елементу блока*/
